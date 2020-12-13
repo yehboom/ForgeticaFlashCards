@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SansForgetica-Regular.otf">
+            <string>SansForgetica-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="ViewController" customModule="ForgeticaFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="View" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="164" y="439.5" width="86.5" height="17"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SansForgetica-Regular" family="Sans Forgetica" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UMD-gj-1hx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1583" y="236"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController storyboardIdentifier="Edit" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ForgeticaFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Description About Word:" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRH-nA-n37">
+                                <rect key="frame" x="35" y="214" width="255" height="28"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please Type Some Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iWj-uo-ew3">
+                                <rect key="frame" x="35" y="263" width="336" height="234"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234" id="4wQ-U3-3Pp"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-oU-Zao" customClass="RatingControl" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                <rect key="frame" x="46" y="562" width="322" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="60" height="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-5d-Pvq">
+                                <rect key="frame" x="35" y="156" width="336" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TypeEnd:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="ELZ-hB-IUp"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Please Enter Your Word :" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="35" y="109" width="253" height="28"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate The Star Of Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3V-5P-GWG">
+                                <rect key="frame" x="62" y="526" width="282" height="28"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.72549019607843135" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="iWj-uo-ew3" secondAttribute="leading" id="2Rs-ON-avr"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="35" id="6gm-EH-CUc"/>
+                            <constraint firstItem="iWj-uo-ew3" firstAttribute="centerX" secondItem="t3V-5P-GWG" secondAttribute="centerX" id="6jQ-Pi-CDp"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="iPE-5d-Pvq" secondAttribute="leading" id="SN0-PT-ajQ"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="21" id="XBD-w8-KYc"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="iWj-uo-ew3" secondAttribute="trailing" constant="43" id="e74-s2-gJZ"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="bRH-nA-n37" secondAttribute="leading" id="fSw-as-MAn"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bRH-nA-n37" secondAttribute="trailing" symbolic="YES" id="iDk-My-zTs"/>
+                            <constraint firstItem="iWj-uo-ew3" firstAttribute="top" secondItem="bRH-nA-n37" secondAttribute="bottom" constant="21" id="pEu-qW-2mz"/>
+                            <constraint firstItem="iWj-uo-ew3" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="263" id="ptW-bM-tqo"/>
+                            <constraint firstItem="t3V-5P-GWG" firstAttribute="top" secondItem="iWj-uo-ew3" secondAttribute="bottom" constant="29" id="tuT-ex-chd"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zEq-FU-wV5" secondAttribute="trailing" symbolic="YES" id="uns-GA-TjD"/>
+                            <constraint firstItem="iPE-5d-Pvq" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="19" id="vrQ-Rz-cAZ"/>
+                            <constraint firstItem="iWj-uo-ew3" firstAttribute="trailing" secondItem="iPE-5d-Pvq" secondAttribute="trailing" id="wfp-at-0cB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <connections>
+                            <action selector="backgroundTouched:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Qf5-Ct-ncq"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="UtC-Rh-e9e"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DescriptionInput" destination="iWj-uo-ew3" id="E2M-Yw-ClA"/>
+                        <outlet property="WordDescription" destination="bRH-nA-n37" id="Kk3-Sv-6nA"/>
+                        <outlet property="WordInput" destination="iPE-5d-Pvq" id="dZ4-wx-SaV"/>
+                        <outlet property="WordTitle" destination="zEq-FU-wV5" id="sQf-iI-6WT"/>
+                        <outlet property="ratingControl" destination="SfH-oU-Zao" id="7PU-Bn-JPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="235.71428571428569"/>
+        </scene>
+        <!--Card Table View Controller-->
+        <scene sceneID="0FU-qC-mpB">
+            <objects>
+                <tableViewController id="kxP-ej-IAw" customClass="CardTableViewController" customModule="ForgeticaFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ms1-Bb-a7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Zero" textLabel="IRT-eb-DIZ" detailTextLabel="7Fk-Cg-QS4" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="npr-tN-ov5">
+                                <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="npr-tN-ov5" id="1fE-g5-Swm" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IRT-eb-DIZ">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Fk-Cg-QS4">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="POj-T9-Ez9" kind="presentation" identifier="Edit" trigger="accessoryAction" modalPresentationStyle="fullScreen" id="eeO-2v-oB8"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Five" textLabel="Snq-4r-CBy" detailTextLabel="WIm-MW-Afs" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="MyW-3e-oqX">
+                                <rect key="frame" x="0.0" y="119" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MyW-3e-oqX" id="xds-CE-dnS" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="highlightedStar5" translatesAutoresizingMaskIntoConstraints="NO" id="ZQy-HB-u7T">
+                                            <rect key="frame" x="272" y="8" width="133" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Snq-4r-CBy">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WIm-MW-Afs">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Four" textLabel="9Ka-t7-0mc" detailTextLabel="nDw-re-sYp" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="LPg-Ai-MTo">
+                                <rect key="frame" x="0.0" y="210" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LPg-Ai-MTo" id="pXX-b7-FSX" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="highlightedStar4" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-gc-YMv">
+                                            <rect key="frame" x="272" y="8" width="133" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ka-t7-0mc">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nDw-re-sYp">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Three" textLabel="r5r-cH-4Kj" detailTextLabel="MLz-5r-u3i" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="T0b-oB-kGD">
+                                <rect key="frame" x="0.0" y="301" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T0b-oB-kGD" id="5S3-ne-Oa4" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="highlightedStar3" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-tv-Nd0">
+                                            <rect key="frame" x="272" y="8" width="133" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r5r-cH-4Kj">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MLz-5r-u3i">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Two" textLabel="BPx-sQ-Cct" detailTextLabel="W9Q-cZ-ihI" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="QWu-Gi-OJD">
+                                <rect key="frame" x="0.0" y="392" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QWu-Gi-OJD" id="Adb-4b-C3a" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="highlightedStar2" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-Gy-6y6">
+                                            <rect key="frame" x="272" y="8" width="133" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BPx-sQ-Cct">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W9Q-cZ-ihI">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="One" textLabel="J7Y-U6-wfK" detailTextLabel="fdh-Cy-KxI" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="T6N-Zr-kc2">
+                                <rect key="frame" x="0.0" y="483" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6N-Zr-kc2" id="25o-vm-jEy" customClass="CardsTableViewCell" customModule="ForgeticaFlashCards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="highlightedStar1" translatesAutoresizingMaskIntoConstraints="NO" id="7Yz-M3-5fU">
+                                            <rect key="frame" x="272" y="8" width="133" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J7Y-U6-wfK">
+                                            <rect key="frame" x="20" y="20" width="48" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fdh-Cy-KxI">
+                                            <rect key="frame" x="20" y="52" width="47" height="16.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72549019609999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kxP-ej-IAw" id="kem-DA-6Pa"/>
+                            <outlet property="delegate" destination="kxP-ej-IAw" id="zj3-Su-y89"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="g5V-bP-7tS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckZ-Uf-ZYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="236"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="H9Y-Qv-QUY"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kHm-Zi-Wqt" kind="relationship" relationship="viewControllers" id="mEH-1I-v8D"/>
+                        <segue destination="ihs-Mb-GXN" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="fEF-N1-oYi" kind="relationship" relationship="viewControllers" id="6sd-TC-ubT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331.8840579710145" y="-535.04464285714278"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="jJB-4q-LYN">
+            <objects>
+                <viewController id="fEF-N1-oYi" customClass="SettingViewController" customModule="ForgeticaFlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zrf-eQ-klj" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Font to Forgetica :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-xP-a9q">
+                                <rect key="frame" x="35" y="133" width="234" height="24"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-iP-9vP">
+                                <rect key="frame" x="332" y="133" width="51" height="31"/>
+                                <connections>
+                                    <action selector="SwitchFont:" destination="fEF-N1-oYi" eventType="valueChanged" id="TZY-RG-Nq0"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn3-O7-xzL">
+                                <rect key="frame" x="80" y="66" width="256" height="34"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <state key="normal" title="Click This Send the mail for help"/>
+                                <connections>
+                                    <action selector="SendMail:" destination="fEF-N1-oYi" eventType="touchUpInside" id="iLC-Wf-Ul2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="XAD-Os-pTm">
+                                <rect key="frame" x="35" y="224" width="346" height="546"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="546" id="Gqy-2r-pAK"/>
+                                </constraints>
+                                <mutableString key="text">Sans Forgetica is a font that has been scientifically designed using principles of psychology to improve retention of written information. It was created by a multidisciplinary team of designers and researchers from RMIT’s School of Design and its Behavioural Business Lab.Today, typographic expression has been unleashed. Digital formats allow us to think and craft beyond the physical restrictions of materials, while glossy, high-definition digital displays allow typographic forms to be straighter,smoother and more symmetrical than ever.
+Never before has it been so easy to craft letterforms that bend to the will of our imaginations.Research has shown that some of the products of these new tools and technologies – in particular the clean, smooth typefaces typically used in contemporary digital interfaces – may be less effective in helping the reader remember information.
+When a piece of information is too easily and cleanly read, it can fail to engage our brains in the kind of deeper cognitive processing necessary for effective retention and recall.
+Sans Forgetica is an attempt to address this somewhat ironic flaw of design. By disrupting the flow of individual letterforms, readers are subtly prompted to increase their focus on the text being communicated. Multiple tests undertaken by RMIT’s Behavioural Business Lab have confirmed that the effect of this is to increase memory retention of the text in question.
+We believe that Sans Forgetica is just one manifestation of a new way of thinking about design and the psychology of learning – and we’re excited by the potential of what’s to come.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The story of Sans Forgetica :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gms-r9-UKK">
+                                <rect key="frame" x="35" y="176" width="252" height="24"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.72549019607843135" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nn3-O7-xzL" firstAttribute="top" secondItem="2v9-rp-8yS" secondAttribute="top" constant="22" id="0F3-9T-lZN"/>
+                            <constraint firstItem="E1a-iP-9vP" firstAttribute="top" secondItem="2v9-rp-8yS" secondAttribute="top" constant="89" id="5bc-fX-fsh"/>
+                            <constraint firstItem="E1a-iP-9vP" firstAttribute="top" secondItem="QvS-xP-a9q" secondAttribute="top" id="9oo-Tq-HxR"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="leading" secondItem="QvS-xP-a9q" secondAttribute="leading" id="RgY-dc-VDF"/>
+                            <constraint firstItem="2v9-rp-8yS" firstAttribute="bottom" secondItem="XAD-Os-pTm" secondAttribute="bottom" constant="43" id="Sqg-mE-V8K"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="leading" secondItem="2v9-rp-8yS" secondAttribute="leading" constant="35" id="WAF-ut-LoB"/>
+                            <constraint firstItem="2v9-rp-8yS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gms-r9-UKK" secondAttribute="trailing" symbolic="YES" id="ZRb-fF-bF1"/>
+                            <constraint firstItem="2v9-rp-8yS" firstAttribute="trailing" secondItem="XAD-Os-pTm" secondAttribute="trailing" constant="33" id="ZfI-Uo-EX8"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="centerX" secondItem="Nn3-O7-xzL" secondAttribute="centerX" id="fg7-lt-IeX"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="trailing" secondItem="E1a-iP-9vP" secondAttribute="trailing" id="glW-1d-2CS"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="leading" secondItem="gms-r9-UKK" secondAttribute="leading" id="kgv-zK-zgB"/>
+                            <constraint firstItem="XAD-Os-pTm" firstAttribute="top" secondItem="gms-r9-UKK" secondAttribute="bottom" constant="24" id="rT3-GL-n2b"/>
+                            <constraint firstItem="E1a-iP-9vP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QvS-xP-a9q" secondAttribute="trailing" constant="8" symbolic="YES" id="syB-3H-ro5"/>
+                            <constraint firstItem="Nn3-O7-xzL" firstAttribute="leading" secondItem="2v9-rp-8yS" secondAttribute="leading" constant="80" id="xrd-Uj-sob"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2v9-rp-8yS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="wrench.fill" catalog="system" selectedImage="wrench.fill" id="9tt-KV-28Y"/>
+                    <connections>
+                        <outlet property="ChangeFont" destination="QvS-xP-a9q" id="65l-GW-dcf"/>
+                        <outlet property="Fontswitch" destination="E1a-iP-9vP" id="yGv-6E-GmF"/>
+                        <outlet property="SendTitle" destination="Nn3-O7-xzL" id="gfh-AC-HfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9K-GM-cG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.0144927536232" y="-535.04464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kav-uu-kZN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ihs-Mb-GXN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="rectangle.fill.on.rectangle.angled.fill" catalog="system" selectedImage="rectangle.fill.on.rectangle.angled.fill" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ADz-qY-M1f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="PCY-p3-gXi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSq-gh-S6P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2267" y="236"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="Z9h-6x-Mri">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="POj-T9-Ez9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="GPJ-0d-mnB"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="F0h-cv-Ypy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="esU-YM-Inh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="o2I-X4-IaH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmn-yl-gVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JVG-r7-Owj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kHm-Zi-Wqt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="folder.fill.badge.plus" catalog="system" selectedImage="folder.fill.badge.plus" id="kEd-y5-vUH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tDg-b0-94w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kxP-ej-IAw" kind="relationship" relationship="rootViewController" id="d1J-4j-LkJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7R-f1-6cB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder.fill.badge.plus" catalog="system" width="64" height="42"/>
+        <image name="highlightedStar1" width="1231" height="302"/>
+        <image name="highlightedStar2" width="1231" height="302"/>
+        <image name="highlightedStar3" width="1231" height="302"/>
+        <image name="highlightedStar4" width="1231" height="302"/>
+        <image name="highlightedStar5" width="1231" height="302"/>
+        <image name="rectangle.fill.on.rectangle.angled.fill" catalog="system" width="64" height="50"/>
+        <image name="second" width="30" height="30"/>
+        <image name="wrench.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
